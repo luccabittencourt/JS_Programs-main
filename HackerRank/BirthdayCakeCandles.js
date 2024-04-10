@@ -1,4 +1,10 @@
 function birthdayCakeCandles(candles) {
     let max = Math.max(...candles);
-    return candles.filter(candle => candle === max).length;
+    let count = 0;
+    for (let candle of candles) {
+        if (candle === max) {
+            count++;
+        }
+    }
+    return count;
 }
